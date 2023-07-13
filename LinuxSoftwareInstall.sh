@@ -34,7 +34,7 @@ while true; do
 			echo -e "\n\n VLC Media Install Competed......\n\n"
 		    ;;
 		3)
-		    esudo apt install python3 -y
+		    	sudo apt install python3 -y
 			echo -e "\n\n Python Install Competed......\n\n"
 			sudo apt install git -y
 			echo -e "\n\n GIT Install Competed......\n\n"
