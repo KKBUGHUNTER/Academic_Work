@@ -1,1 +1,6 @@
 # Others
+
+## [Linux Software Install tool](https://github.com/KKBUGHUNTER/Others/blob/main/LinuxSoftwareInstall.sh)
+```bash
+./LinuxSoftwareInstall.sh
+```
