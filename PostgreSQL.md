@@ -4,6 +4,8 @@ To connect PostgreSQL to a Golang application on Ubuntu, you'll need to follow t
 
    ```
    sudo apt-get update
+   sudo apt-get install git
+   sudo apt-get install golang-go
    sudo apt-get install postgresql postgresql-contrib
    ```
 
