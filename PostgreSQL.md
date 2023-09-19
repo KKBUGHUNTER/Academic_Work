@@ -89,7 +89,7 @@ This will return you to your regular command prompt.
    go get github.com/lib/pq
    ```
 
-10. **Write a Go Program**:
+10. **Write a Go Program (main.go)**:
    Here's a simple example of a Go program that connects to the PostgreSQL database and performs a basic query:
 
    ```go
@@ -103,7 +103,7 @@ This will return you to your regular command prompt.
 
    func main() {
        // Connect to the PostgreSQL database
-       connStr := "user=myuser dbname=mydb sslmode=disable"
+       connStr := "user=myuser dbname=mydb password=mypassword sslmode=disable"
        db, err := sql.Open("postgres", connStr)
        if err != nil {
            panic(err)
@@ -111,7 +111,7 @@ This will return you to your regular command prompt.
        defer db.Close()
 
        // Perform a sample query
-       rows, err := db.Query("SELECT * FROM your_table_name")
+       rows, err := db.Query("SELECT * FROM list")
        if err != nil {
            panic(err)
        }
@@ -135,9 +135,42 @@ This will return you to your regular command prompt.
    You can compile and run your Go program like this:
 
    ```
-   go build your_program.go
-   ./your_program
+   go build -o main.go
+   ./main
    ```
 
-   Make sure to replace `your_program.go` with the actual filename of your Go source code.
+12. **Fixing The permission denied for table list problem**
+![Screenshot from 2023-09-19 18-47-27](https://github.com/KKBUGHUNTER/Others/assets/91019132/753e3674-17ed-429d-b9d6-81de0fdbf1e9)
+ Here are the steps to grant the necessary permissions:
 
+12.1. **Connect to PostgreSQL**: Connect to the PostgreSQL database with a superuser or a user who has the necessary privileges to grant permissions. You can use the `psql` command as you did before:
+
+   ```bash
+   sudo -u postgres psql -d mydb
+   ```
+
+   Replace "mydb" with the name of your database.
+
+12.2. **Grant SELECT Permission**: In the `psql` shell, grant the `SELECT` permission on the "list" table to your PostgreSQL user. Replace `<username>` with the actual username your Go application is using:
+
+   ```sql
+   GRANT SELECT ON TABLE list TO myuser;
+   ```
+
+   This grants the SELECT permission on the "list" table to the specified user, allowing them to retrieve data from the table.
+
+12.3. **Exit `psql`**: After granting the permissions, you can exit the `psql` shell:
+
+   ```sql
+   \q
+   ```
+
+12.4. **Rebuild and Run Your Go Application**: After granting the necessary permissions, rebuild and run your Go application:
+
+   ```bash
+   go build -o main && ./main
+   ```
+
+   Your application should now be able to access the "list" table without encountering the "permission denied" error.
+
+## Thank you...
