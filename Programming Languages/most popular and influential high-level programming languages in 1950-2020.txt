@@ -1,0 +1,35 @@
+This list is not exhaustive, but it includes some of the most popular and influential high-level programming languages that have been developed over the past 70 years
+    1950s:
+        FORTRAN
+        ALGOL
+        COBOL
+    1960s:
+        BASIC
+        PASCAL
+        PL/I
+    1970s:
+        C
+        Smalltalk
+        SQL
+        Prolog
+    1980s:
+        C++
+        Objective-C
+        Perl
+        Ada
+    1990s:
+        Python
+        Ruby
+        Java
+        JavaScript
+        PHP
+    2000s:
+        C#
+        Scala
+        Groovy
+        Go
+    2010s and beyond:
+        Swift
+        Rust
+        Julia
+        Kotlin
