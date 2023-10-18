@@ -1,6 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/rd0kEjs3) - Sep 28, 2023, 23:59 IST
-
-
 ### About me
 #### Karthikeyan A <br> 3122 21 5001 041 <br> 3dh Year, BE.Computer Science <br> Sri Sivasubramaniya Nadar(SSN) College of Engineering.
 
